@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Pong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="title">PONG</h1>
+      <div class="mode-select">
+        <label for="gameMode">Mode:</label>
+        <select id="gameMode">
+          <option value="ai">1 Player vs AI</option>
+          <option value="pvp">2 Players (Local)</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="canvas-wrapper">
+      <canvas id="pongCanvas" width="800" height="500"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlayMessage">PRESS SPACE TO SERVE</p>
+      </div>
+    </div>
+
+    <footer class="game-footer">
+      <div class="control-hints">
+        <div><strong>Player 1 (Left):</strong> <kbd>W</kbd> / <kbd>S</kbd></div>
+        <div><strong>Player 2 (Right):</strong> <kbd>▲</kbd> / <kbd>▼</kbd> (or AI)</div>
+        <div><strong>Controls:</strong> <kbd>Space</kbd> Start/Pause &bull; <kbd>R</kbd> Restart &bull; <kbd>M</kbd> Mute</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
